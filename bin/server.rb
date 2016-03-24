@@ -11,6 +11,12 @@ require_relative '../lib/all'
 
 module App
   # Place all data here inside of a method
+  def App.posts
+    @all_posts ||= [
+      Post.new("Title", "Bob", "Sample Post"),
+      Post.new("Second Title", "Reginald", "Reginald's post")
+    ]
+  end
   def App.tweets
     # This is an example
     @all_tweets ||= [

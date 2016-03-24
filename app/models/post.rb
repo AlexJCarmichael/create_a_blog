@@ -7,7 +7,7 @@ class Post
     @title = title
     @author = author
     @body = body
-    @published = true
+    @published = false
   end
 
   def to_json(_ = nil)

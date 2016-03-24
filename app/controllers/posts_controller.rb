@@ -4,8 +4,23 @@ class PostsController < ApplicationController
     @posts = App.posts
     render_template 'posts/index.html.erb'
   end
+
   def show
     @post = App.posts.find { |p| p.id == params[:id].to_i }
-    render_template 'posts/show.html.erb'
+    if @post
+      render_template 'posts/show.html.erb'
+    else
+      render ""
+    end
+  end
+
+  def new
+    render_template "posts/new.html.erb"
+  end
+
+  def create
+    new_post = Post.new(params[:title], params[:author], params[:body])
+    App.posts << new_post
+    redirect_to "/posts/#{new_post.id}"
   end
 end

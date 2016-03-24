@@ -1,13 +1,15 @@
 
-$ids_given = 0
+$id_given = 1
 class Post
-  attr_accessor :id, :title, :author, :body, :published
+  attr_accessor :id, :title, :author, :body, :published, :comments
   def initialize(title, author, body)
-    @id = this_assigns_an_id_at_creation
+    @id = $id_given
+    $id_given += 1
     @title = title
     @author = author
     @body = body
     @published = false
+    @comments = []
   end
 
   def to_json(_ = nil)
@@ -18,9 +20,5 @@ class Post
     body: body,
     published: published
     }.to_json
-  end
-
-  def this_assigns_an_id_at_creation
-    $ids_given +=1
   end
 end

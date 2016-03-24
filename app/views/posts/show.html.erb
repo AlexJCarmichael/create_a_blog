@@ -7,3 +7,10 @@
 <h6>
   By: <%=@post.author%>
 </h6>
+
+<h3> Comments </h3>
+<ol>
+  <% @post.comments.each do |comment| %>
+    <li> <%= comment.body %> | <%= comment.author %> </li>
+  <% end %>
+</ol>

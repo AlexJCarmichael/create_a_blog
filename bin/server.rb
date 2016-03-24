@@ -14,7 +14,8 @@ module App
   def App.posts
     @all_posts ||= [
       Post.new("Title", "Bob", "Sample Post"),
-      Post.new("Second Title", "Reginald", "Reginald's post")
+      Post.new("Second Title", "Reginald", "Reginald's post"),
+      Post.new("Third Title", "George", "George's post")
     ]
   end
   def App.tweets
@@ -25,6 +26,12 @@ module App
       { message: "ohno tweet!", id: 3},
       { message: "eehhh tweet", id: 4},
     ]
+  end
+end
+
+App.posts.each do |post|
+  rand(1..3).times do
+    Comment.new("This is a comment", "George", post)
   end
 end
 

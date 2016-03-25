@@ -16,6 +16,7 @@ class Router
     #
     # Put your routes in this array using the get, post, put, delete methods below. (remember order matters)
     [
+      resource('comments', CommentsController),
       resource('posts', PostsController),
       get('/', PostsController, :index),
       get('/not_here', TweetsController, :not_here), # This is to demo the new redirect_to method

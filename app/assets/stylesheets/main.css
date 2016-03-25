@@ -68,3 +68,8 @@ body {
   margin-top: .5em;
   text-align: center;
 }
+
+.add-comment-link {
+  text-decoration: none;
+  color: #5DB89D;
+}

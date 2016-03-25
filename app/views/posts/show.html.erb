@@ -19,6 +19,5 @@
   <% @post.comments.each do |comment| %>
     <li> <%= comment.body %> | <%= comment.author %> </li>
   <% end %>
-  <li class = "add-comment"><a class = "add-comment-link" href="/comments/new"> Add a comment? </li>
+  <li class = "add-comment"><a class = "add-comment-link" href="/comments/new?pid=<%=@post.id%>"> Add a comment? </li>
 </ol>
-<%=render_partial "comments/new.html.erb"%>

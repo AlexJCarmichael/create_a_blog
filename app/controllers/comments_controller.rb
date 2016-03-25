@@ -3,11 +3,12 @@ class CommentsController < ApplicationController
   def show
   end
   def new
+    @post = App.posts
     render_template "comments/new.html.erb"
   end
   def create
-    # new_comment = Comment.new(params[:author], params[:body])
-    # App.posts << new_post
-    # redirect_to "/posts/#{post.id}"
+    post = App.posts.find { |p| p.id == params["pid"].to_i }
+    Comment.new(params[:author], params[:body], post)
+    redirect_to "/posts/#{post.id}"
   end
 end

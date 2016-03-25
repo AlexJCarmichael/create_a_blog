@@ -21,11 +21,18 @@ class Router
       get('/', PostsController, :index),
       get('/not_here', TweetsController, :not_here), # This is to demo the new redirect_to method
 
-      get('/assets/:type/:name', AssetsController, :handle)
+      get('/assets/:type/:name', AssetsController, :handle),
+      root(TweetsController, :index)
     ].flatten.find(&:itself)
   end
 
   private # No need to edit these, but feel free to read them to see how they work
+
+  def root(controller, action)
+    [
+      get('/', controller, action)
+    ]
+  end
 
   def api_resource(name, controller)
     [

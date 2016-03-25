@@ -18,7 +18,7 @@ class Router
     [
       resource('comments', CommentsController),
       resource('posts', PostsController),
-      api_resource('api/comments', CommentsController),
+      api_resource('api/comments', APICommentsController),
       api_resource('api/posts', APIPostsController),
       get('/', PostsController, :index),
       get('/assets/:type/:name', AssetsController, :handle),

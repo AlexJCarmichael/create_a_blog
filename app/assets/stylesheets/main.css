@@ -2,12 +2,18 @@ header {
   max-height: 2.5em;
   padding-bottom: .225em;
   margin-top: -.225em;
-  background-color: #A7DBDB;
+  /*background-color: #A7DBDB;*/
 }
 
 body {
-  background-color: #F7EAC8;
-  color: #5DB89D;
+  /*background-color: #F7EAC8;*/
+  /*color: #5DB89D;*/
+  color: #333;
+}
+
+h3 {
+  border-bottom: 3px solid #A7DBDB;
+  margin-bottom: 5px;
 }
 
 .main-header {
@@ -28,6 +34,7 @@ body {
 
 .display-list {
   list-style: none;
+  padding:0;
 }
 
 .nav-links > li {
@@ -41,16 +48,26 @@ body {
 }
 
 .home-container {
-    width: 20em;
-    margin: 0 auto;
+    /*width: 20em;*/
+    /*margin: 4em;*/
+    background: linear-gradient(#FFF, #FFF, #F7EAC8);
+    border-radius: 0px 0px 40px 0;
 }
 
 .home-title {
   text-align: center;
+  width: 10em
 }
 
 .home-author {
-  text-align: center;
+  text-align: left;
+  font-size: 9px;
+  color: #999;
+}
+
+.home-body {
+  width: 20em;
+  margin: 1.3em auto;
 }
 
 .individual-body {

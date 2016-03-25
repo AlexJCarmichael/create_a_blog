@@ -1,16 +1,23 @@
-<h1> <%=@post.title%> </h1>
+<h1 class = "main-header">
+  <%=@post.title%>
+</h1>
 
-<p>
+<p class = "home-author">
+  By: <%=@post.author%>
+</p>
+
+
+<p class = "individual-body">
   <%=@post.body%>
 </p>
 
-<h6>
-  By: <%=@post.author%>
-</h6>
+<h3 class = "main-header">
+   Comments for <%=@post.title%>
+</h3>
 
-<h3> Comments </h3>
-<ol>
+<ol class = "comment-list">
   <% @post.comments.each do |comment| %>
     <li> <%= comment.body %> | <%= comment.author %> </li>
   <% end %>
+  <li class = "add-comment"> Add a comment? </li>
 </ol>

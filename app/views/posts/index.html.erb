@@ -1,7 +1,13 @@
-<h1> Posts </h1>
+<h1 class = "main-header"> Posts </h1>
 
-<ol>
+<ul class = "display-list">
   <% @posts.each do |post| %>
-    <li><a href='/posts/<%=post.id %>'><%= post.title %></a> | <%= post.author %> | <%= post.body %> | <%= post.id %></li>
+    <li>
+      <div class = "home-container">
+        <div class = "home-title"><h3><a class="post-link" href='/posts/<%=post.id %>'><%= post.title %></a></h3></div>
+        <div class = "home-author">By: <%= post.author %></div>
+        <div class = "home-body"><%= post.body %></div>
+      </div>
+    </li>
   <% end %>
-</ol>
+</ul>

@@ -1,0 +1,70 @@
+header {
+  max-height: 2.5em;
+  padding-bottom: .225em;
+  margin-top: -.225em;
+  background-color: #A7DBDB;
+}
+
+body {
+  background-color: #F7EAC8;
+  color: #5DB89D;
+}
+
+.main-header {
+  width: 10em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav-links {
+  color: #5DB89D;
+  list-style: none;
+  display: inline-block; }
+
+.top-links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.display-list {
+  list-style: none;
+}
+
+.nav-links > li {
+  display: inline-block;
+  margin-right: .5em;
+  vertical-align: middle;}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-container {
+    width: 20em;
+    margin: 0 auto;
+}
+
+.home-title {
+  text-align: center;
+}
+
+.home-author {
+  text-align: center;
+}
+
+.individual-body {
+  width: 20em;
+  margin: 0 auto 2em auto;
+}
+
+.comment-list {
+  width: 20em;
+  margin: 1em auto;
+}
+
+.add-comment {
+  list-style: none;
+  margin-top: .5em;
+  text-align: center;
+}

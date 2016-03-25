@@ -13,9 +13,9 @@ module App
   # Place all data here inside of a method
   def App.posts
     @all_posts ||= [
-      Post.new("Title", "Bob", "Sample Post"),
-      Post.new("Second Title", "Reginald", "Reginald's post"),
-      Post.new("Third Title", "George", "George's post")
+      Post.new("Title", "Bob", "Sed lectus. Quisque id odio. Suspendisse non nisl sit amet velit hendrerit rutrum."),
+      Post.new("Second Title", "Reginald", "Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Ut varius tincidunt libero. Vivamus laoreet. Aenean imperdiet. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. In auctor lobortis lacus."),
+      Post.new("Third Title", "George", "Nulla consequat massa quis enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Phasellus gravida semper nisi. Fusce fermentum.")
     ]
   end
   def App.tweets

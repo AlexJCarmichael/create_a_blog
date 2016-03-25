@@ -18,7 +18,8 @@ class Post
     title: title,
     author: author,
     body: body,
-    published: published
+    published: published,
+    comments: comments
     }.to_json
   end
 end

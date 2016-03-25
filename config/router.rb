@@ -18,9 +18,9 @@ class Router
     [
       resource('comments', CommentsController),
       resource('posts', PostsController),
+      api_resource('api/comments', CommentsController),
+      api_resource('api/posts', APIPostsController),
       get('/', PostsController, :index),
-      get('/not_here', TweetsController, :not_here), # This is to demo the new redirect_to method
-
       get('/assets/:type/:name', AssetsController, :handle),
       root(TweetsController, :index)
     ].flatten.find(&:itself)

@@ -46,7 +46,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     post = App.posts.find { |p| p.id == params[:id].to_i }
     App.posts.delete(post)
     redirect_to "/posts"

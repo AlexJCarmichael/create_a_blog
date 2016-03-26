@@ -32,6 +32,11 @@
       <div class="edit-button">
         <a class="edit-post" href="/comments/<%=comment.id%>/edit?cid=<%=comment.id%>">Edit Comment</a>
       </div>
+      <div class="delete-button">
+        <form action='/comments/<%=comment.id%>/delete' method="post" accept-charset="utf-8" id='edit-comment'>
+          <input type='submit' id='delete' value='Delete Comment'/>
+        </form>
+      </div>
     <% end %>
     <li class = "add-comment"><a class = "add-comment-link" href="/comments/new?pid=<%=@post.id%>"> Add a comment? </li>
   </ol>

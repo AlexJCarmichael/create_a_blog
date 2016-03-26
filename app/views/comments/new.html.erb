@@ -1,10 +1,12 @@
-<h2 class = "main-header" >Create a new Comment</h2>
-<form action='/comments' method="post" accept-charset="utf-8" id='new-comment'>
-  <label class='edit-body' for='body'>Body</label>
-  <input type='text' name='body' id='body'/>
-  <label class='edit-author' for='author'>Author</label>
-  <input type='text' name='author' id='author'/>
-  <input type='hidden' name='pid' value ='<%=params["pid"]%>' />
+<section class="show-individual">
+  <h2 class = "main-header" >Create a new Comment</h2>
+  <form action='/comments' method="post" accept-charset="utf-8" id='new-comment'>
+    <label class='edit-body' for='body'>Body</label>
+    <input type='text' name='body' id='body'/>
+    <label class='edit-author' for='author'>Author</label>
+    <input type='text' name='author' id='author'/>
+    <input type='hidden' name='pid' value ='<%=params["pid"]%>' />
 
-  <input type='submit' name='commit' id='create_post'  />
-</form>
+    <input class='submit-button' type='submit' name='commit' id='create_post'  />
+  </form>
+</section>

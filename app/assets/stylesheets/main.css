@@ -119,12 +119,13 @@ input[type=text]:focus {
 
 input[type=submit] {
     padding:5px 15px;
-    background:#ccc;
+    background:none;
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     margin-top: .5em;
+    font-size: .5em;
 }
 
 textarea {
@@ -177,4 +178,12 @@ textarea:focus {
 .add-comment-link {
   text-decoration: none;
   color: #5DB89D;
+}
+
+input[type=submit].submit-button {
+  font-size: 1em;
+}
+
+.show-individual {
+  background: linear-gradient(#FFF, #FFF, #F7EAC8);
 }

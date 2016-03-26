@@ -1,12 +1,12 @@
-<h2>Create a new Post</h2>
+<h2 class="main-header">Create a new Post</h2>
 
 <form action='/posts' method="post" accept-charset="utf-8" id='new-post'>
-  <label for='title'>Title</label>
+  <label class='edit-title' for='title'>Title</label>
   <input type='text' name='title' id='title'/>
-  <label for='body'>Body</label>
-  <input type='text' name='body' id='body'/>
-  <label for='author'>Author</label>
+  <label class='edit-author' for='author'>Author</label>
   <input type='text' name='author' id='author'/>
+  <label class='edit-body' for='body'>Body</label>
+  <textarea name='body' id='body'></textarea>
 
   <input type='submit' name='commit' id='create_post'  />
 </form>

@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   def show
   end
   def new
-    binding.pry
     @post = App.posts
     render_template "comments/new.html.erb"
   end
@@ -17,7 +16,9 @@ class CommentsController < ApplicationController
   def update
     comments = make_comment_array
     comment = comments.find { |c| c.id == params["cid"].to_i }
-    post = comment.post_id
+    if comment
+      post = comment.post_id
+    end
     if comment
       comment.author = params["author"]
       comment.body = params["body"]

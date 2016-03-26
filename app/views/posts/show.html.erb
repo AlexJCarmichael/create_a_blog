@@ -21,14 +21,16 @@
       <input type='submit' id='delete' value='Delete Post'/>
     </form>
   </div>
-
+</section>
+<section class="show-comments">
   <h3 class="main-header">
      Comments for <%=@post.title%>
   </h3>
 
   <ol class="comment-list">
     <% @post.comments.each do |comment| %>
-      <li> <%= comment.body %> | <%= comment.author %> </li>
+      <li> <%= comment.body %> </li>
+      <li class="home-author"> By: <%= comment.author %> </li>
       <div class="edit-button">
         <a class="edit-post" href="/comments/<%=comment.id%>/edit?cid=<%=comment.id%>">Edit Comment</a>
       </div>

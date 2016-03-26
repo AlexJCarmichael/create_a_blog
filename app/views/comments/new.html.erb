@@ -1,8 +1,8 @@
 <h2 class = "main-header" >Create a new Comment</h2>
 <form action='/comments' method="post" accept-charset="utf-8" id='new-comment'>
-  <label for='body'>Body</label>
+  <label class='edit-body' for='body'>Body</label>
   <input type='text' name='body' id='body'/>
-  <label for='author'>Author</label>
+  <label class='edit-author' for='author'>Author</label>
   <input type='text' name='author' id='author'/>
   <input type='hidden' name='pid' value ='<%=params["pid"]%>' />
 

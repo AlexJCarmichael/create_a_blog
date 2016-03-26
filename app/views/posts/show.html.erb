@@ -1,23 +1,38 @@
-<h1 class = "main-header">
-  <%=@post.title%>
-</h1>
+<section class="show-post">
+  <h1 class="main-header">
+    <%=@post.title%>
+  </h1>
 
-<p class = "home-author">
-  By: <%=@post.author%>
-</p>
+  <p class="home-author">
+    By: <%=@post.author%>
+  </p>
 
 
-<p class = "individual-body">
-  <%=@post.body%>
-</p>
+  <p class="individual-body">
+    <%=@post.body%>
+  </p>
 
-<h3 class = "main-header">
-   Comments for <%=@post.title%>
-</h3>
+  <div class="edit-button">
+    <a class="edit-post" href="/posts/<%=@post.id%>/edit">Edit post</a>
+  </div>
 
-<ol class = "comment-list">
-  <% @post.comments.each do |comment| %>
-    <li> <%= comment.body %> | <%= comment.author %> </li>
-  <% end %>
-  <li class = "add-comment"><a class = "add-comment-link" href="/comments/new?pid=<%=@post.id%>"> Add a comment? </li>
-</ol>
+  <div class="delete-button">
+    <form action='/posts/<%=@post.id%>/delete' method="post" accept-charset="utf-8" id='edit-post'>
+      <input type='submit' id='delete' value='Delete Post'/>
+    </form>
+  </div>
+
+  <h3 class="main-header">
+     Comments for <%=@post.title%>
+  </h3>
+
+  <ol class="comment-list">
+    <% @post.comments.each do |comment| %>
+      <li> <%= comment.body %> | <%= comment.author %> </li>
+      <div class="edit-button">
+        <a class="edit-post" href="/comments/<%=comment.id%>/edit?cid=<%=comment.id%>">Edit Comment</a>
+      </div>
+    <% end %>
+    <li class = "add-comment"><a class = "add-comment-link" href="/comments/new?pid=<%=@post.id%>"> Add a comment? </li>
+  </ol>
+</section>

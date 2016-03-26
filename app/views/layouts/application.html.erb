@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Awesome Page!</title>
-    <link media="screen" rel="stylesheet" href="/assets/stylesheets/application.css"  />
+    <title>My first blog</title>
     <link rel="stylesheet" type="text/css" href="/assets/stylesheets/normalize.css">
     <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
   </head>
@@ -18,6 +17,8 @@
       </nav>
     </header>
     <!-- Ruby will place one of my templates inside of this file, right here where I call "yield"  -->
-    <%= yield %>
+    <section class='content'>
+      <%= yield %>
+    </section>
   </body>
 </html>

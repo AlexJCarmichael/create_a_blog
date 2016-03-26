@@ -61,6 +61,8 @@ h3 {
 
 .home-author {
   text-align: left;
+  width: 20em;
+  margin: 0 auto;
   font-size: 9px;
   color: #999;
 }
@@ -78,6 +80,15 @@ h3 {
 .comment-list {
   width: 20em;
   margin: 1em auto;
+}
+
+.edit-button {
+  text-align: center;
+}
+
+.edit-post {
+  text-decoration: none;
+  color: black;
 }
 
 .add-comment {

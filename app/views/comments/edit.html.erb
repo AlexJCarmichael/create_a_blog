@@ -1,0 +1,12 @@
+<section class="editcomment">
+  <h2 class="main-header">Edit your Comment</h2>
+  <form action='/comments/<%=@comment.id%>' method="post" accept-charset="utf-8" id='edit-comment'>
+    <label for='author'>Author</label>
+    <input type='text' name='author' id='author' value='<%=@comment.author%>'/>
+    <label for='body'>Body</label>
+    <textarea name='body' id='body'><%=@comment.body%></textarea>
+    <input type='hidden' name='cid' value ='<%=params["cid"]%>' />
+
+    <input type='submit' name='commit' id='edit_post'  />
+  </form>
+</sectionn>

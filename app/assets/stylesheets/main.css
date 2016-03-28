@@ -187,3 +187,20 @@ input[type=submit].submit-button {
 .show-individual {
   background: linear-gradient(#FFF, #FFF, #F7EAC8);
 }
+
+@media (min-width: 450px) {
+  .home-container {
+    width: 95%;
+    overflow: hidden;
+    float: left;
+    margin-right: 2.5em;
+  }}
+
+@media (min-width: 800px) {
+  .home-container{
+  border-radius: 0px 0px 40px 40px;
+  width: 45%;
+  overflow: hidden;
+  float: left;
+  margin-right: 2.5em;
+}}

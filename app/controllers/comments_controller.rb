@@ -37,10 +37,11 @@ class CommentsController < ApplicationController
   def destroy
     comments = make_comment_array
     comment = comments.find { |p| p.id == params[:id].to_i }
+    ident = comment.post_id
     if comment
       post = App.posts.find { |p| p.id == comment.post_id }
       post.comments.delete(comment)
-      redirect_to "/posts"
+      redirect_to "/posts/#{ident}"
     else
       render ""
     end

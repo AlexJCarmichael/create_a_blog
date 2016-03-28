@@ -1,0 +1,21 @@
+<h1 class = "main-header"> Comments </h1>
+
+<ul class = "display-list">
+  <% @comments.each do |comment| %>
+  <% post = App.posts.find { |p| p.id == comment.post_id } %>
+    <li>
+      <div class="home-container">
+        <div class="home-title"><a class="post-link" href='/posts/<%=post.id %>'><h3>Comment for <%= post.title%></h3></a></div>
+        <div class="home-author">By: <%= comment.author %></div>
+        <div class="home-body"><%= comment.body[0...300] %><% if comment.body.length > 300 %> <a class="post-link" href='/comments/<%=comment.id %>'>... <%end%></div>
+        <div class="edit-button">
+          <a class="edit-post" href="/comments/<%=comment.id%>/edit?cid=<%=comment.id%>">Edit Comment</a>
+        </div>
+        <div class="delete-button">
+          <form action='/comments/<%=comment.id%>/delete' method="post" accept-charset="utf-8" id='edit-comment'>
+            <input type='submit' id='delete' value='Delete Comment'/>
+          </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

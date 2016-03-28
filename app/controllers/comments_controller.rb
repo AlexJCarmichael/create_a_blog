@@ -1,16 +1,22 @@
 
 class CommentsController < ApplicationController
+  def index
+    @comments = make_comment_array
+    render_template '/comments/index.html.erb'
+  end
+
   def show
   end
+
   def new
     @post = App.posts
-    render_template "comments/new.html.erb"
+    render_template "/comments/new.html.erb"
   end
 
   def edit
     comments = make_comment_array
     @comment = comments.find { |c| c.id == params["cid"].to_i }
-    render_template "comments/edit.html.erb"
+    render_template "/comments/edit.html.erb"
   end
 
   def update
